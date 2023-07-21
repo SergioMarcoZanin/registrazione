@@ -1,0 +1,15 @@
+<form #homeform="ngForm" (click)="onSubmit(homeform)" class="example-form">
+    <h1>REGISTRAZIONE</h1>
+    <table class="example-full-width" cellspacing="0"><tr>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput ngModel type="email" ngModel required="true" name="email" >
+      </mat-form-field></td>
+      <br>
+      <td><mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" ngModel required="true" name="password" >
+      </mat-form-field></td>
+    </tr></table>
+      <button mat-raised-button type="submit" [disabled]="!homeform.valid">Submit</button>
+  </form>
